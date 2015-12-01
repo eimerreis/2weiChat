@@ -1,0 +1,61 @@
+<!Doctype html>
+<html >
+    <head>
+        <meta name="viewport" content="initial-scale=1">
+        <title>TVR 2wei Heimspiel - Backend</title>
+        
+        <!-- Semantic UI -->
+        <link rel="stylesheet" type="text/css" href="libs/semantic/semantic.min.css" />
+        
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body ng-app="chat">
+    <div class="ui container">
+      <div class="ui divider"></div>
+        <h1 class="ui centered header">Sag was zu den Rangers!</h1>
+      <div class="ui divider"></div>
+      <p> Sende eine kreative Nachricht direkt an die Videowand in der Volksbank Arena!</p>
+      <div class="ui divider"></div>
+      <div ng-controller="ChatController" class="ui form">
+
+        <div class="field">
+            <div class="ui right icon input">
+              <input ng-model="name" type="text" placeholder="Dein Name...">
+              <i class="user icon"></i>
+            </div>
+        </div>
+          
+        <div class="field">
+            <div class="ui right icon input">
+              <input ng-model="message" type="text" placeholder="Deine Nachricht an die Rangers..." />
+                  <i class="mail icon"></i>
+            </div>
+        </div>
+        <button ng-click="sendMessage" class="fluid ui green button"><i class="send icon"></i>Senden</button>
+      </div>
+    </div>
+    
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="libs/jquery/jquery-2.1.4.min.js"></script>
+    
+    <!-- Semnatic UI -->
+    <script type="text/javascript" src="libs/semantic/semantic.min.js"></script>
+    
+    <!-- Angular und Module -->
+    <script src="libs/angular-1.4.7/angular.js"></script>
+    <script src="libs/angular-1.4.7/angular-route.min.js"></script>
+    
+    <!-- Angular Modules -->
+  
+    
+    
+    <!-- Angular App -->
+    <script src="scripts/app.js"></script>
+    
+    <!-- Socket IO -->
+    <script src="libs/socket.io/socket.io.js"></script>
+    <script src="scripts/socket.client.js"></script>
+    </body>
+</html>
