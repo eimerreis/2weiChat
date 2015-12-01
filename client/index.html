@@ -18,7 +18,6 @@
       <p> Sende eine kreative Nachricht direkt an die Videowand in der Volksbank Arena!</p>
       <div class="ui divider"></div>
       <div ng-controller="ChatController" class="ui form">
-
         <div class="field">
             <div class="ui right icon input">
               <input ng-model="name" type="text" placeholder="Dein Name...">
@@ -32,7 +31,7 @@
                   <i class="mail icon"></i>
             </div>
         </div>
-        <button ng-click="sendMessage" class="fluid ui green button"><i class="send icon"></i>Senden</button>
+        <button ng-click="sendMessage()" class="fluid ui green button"><i class="send icon"></i>Senden</button>
       </div>
     </div>
     
