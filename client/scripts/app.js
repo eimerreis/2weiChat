@@ -13,15 +13,12 @@
                 $('#success-message').delay(600).velocity({opacity: 1}, { duration: 500,
                     complete: function(elements){
                         $("#message-form input").each(function(){
-<<<<<<< HEAD
                           $(this).val('');
                           $scope.message = '';
                           $scope.name = ''
-=======
                            $(this).val('');
                             $scope.message = '';
                             $scope.name = ''
->>>>>>> 2a3a1b280940624591604d55cc1f01b064f72974
                         });
                     }
                 });
