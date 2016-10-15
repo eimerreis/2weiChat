@@ -27,7 +27,7 @@
                 if(document.cookie){
                   already = true;
                 }
-                document.cookie = "userId=" + createGuid();
+                document.cookie = "userId=" + $scope.createGuid();
                 //$("#new-message").velocity("fadeIn", {delay: 200, duration: 500});
                 socket.emit('chat-message', {"name": $scope.name, "message": $scope.message, "alreadySent": already, "cookie": document.cookie});
                 console.log("Nachricht gesendet ------ " + $scope.name + ": " + $scope.message);
