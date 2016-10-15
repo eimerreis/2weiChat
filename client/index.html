@@ -3,22 +3,22 @@
     <head>
         <meta name="viewport" content="initial-scale=1">
         <title>Nachricht an die Rangers</title>
-        
+
         <!-- Semantic UI -->
         <link rel="stylesheet" type="text/css" href="libs/semantic/semantic.min.css" />
-        
+
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" type="text/css" href="style.css" />
-        
+
             <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-72460481-1', 'auto');
       ga('send', 'pageview');
-    
+
     </script>
     </head>
     <body ng-app="chat">
@@ -37,7 +37,7 @@
               <i class="user icon"></i>
             </div>
         </div>
-          
+
         <div class="field">
             <div class="ui right icon input">
               <input ng-model="message" type="text" placeholder="Deine Nachricht an die Rangers..." />
@@ -46,7 +46,7 @@
         </div>
         <button ng-disabled="name == undefined || message == undefined || name == '' || message == ''" ng-click="sendMessage()" type="submit"  class="fluid ui green button"><i class="send icon"></i>Senden</button>
       </div>
-      
+
       <div ng-controller="ChatController"  style="opacity: 0;"  id="success-message" class="ui message">
         <i ng-click="closeMessage()"  class="close icon"></i>
         <div class="header">
@@ -55,32 +55,38 @@
           <p>Deine Nachricht erscheint gleich auf der Videowand.</p>
 
       </div>
-      
+
+      <div class="ui modal winner-modal">
+        <div class="header">Glückwunsch!!!</div>
+        <p> Du hast gerade ein Freigetränk gewonnen - Lauf mit deinem Handy zur Theke und hol's dir ab! </p>
+        <br /> Cheers!
+      </div>
+
     </div>
-    
-    
+
+
     <!-- jQuery -->
     <script type="text/javascript" src="libs/jquery/jquery-2.1.4.min.js"></script>
     <!-- Profanity Filter -->
     <script type="text/javascript" src="https://raw.githubusercontent.com/ChaseFlorell/jQuery.ProfanityFilter/master/jquery.profanityfilter.min.js"></script>
-    
+
     <!-- Semantic UI -->
     <script type="text/javascript" src="libs/semantic/semantic.min.js"></script>
-    
+
     <!-- Velocity JS -->
     <script type="text/javascript" src="libs/velocity/velocity.min.js"></script>
-    
+
     <!-- Angular und Module -->
     <script src="libs/angular-1.4.7/angular.js"></script>
     <script src="libs/angular-1.4.7/angular-route.min.js"></script>
-    
+
     <!-- Angular App -->
     <script src="scripts/app.js"></script>
-    
+
     <!-- Socket IO -->
     <script src="libs/socket.io/socket.io.js"></script>
     <script src="scripts/socket.client.js"></script>
-    
+
     </body>
 
 </html>

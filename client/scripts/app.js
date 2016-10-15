@@ -27,12 +27,22 @@
                 if(document.cookie){
                   already = true;
                 }
-                document.cookie = "alreadySentMessage=true";
+                document.cookie = "userId=" + createGuid();
                 //$("#new-message").velocity("fadeIn", {delay: 200, duration: 500});
-                socket.emit('chat-message', {"name": $scope.name, "message": $scope.message, "alreadySent": already});
+                socket.emit('chat-message', {"name": $scope.name, "message": $scope.message, "alreadySent": already, "cookie": document.cookie});
                 console.log("Nachricht gesendet ------ " + $scope.name + ": " + $scope.message);
             }
         };
+
+        $scope.createGuid =     function () {
+              function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                  .toString(16)
+                  .substring(1);
+              }
+              return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                s4() + '-' + s4() + s4() + s4();
+            };
 
         $scope.closeMessage = function(){
             $("#success-message").velocity({ opacity: 0}, 500);
