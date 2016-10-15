@@ -25,6 +25,7 @@
                         });
                     }
                 });
+
                 var already = false;
                 if(document.cookie){
                   already = true;
