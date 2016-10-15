@@ -13,7 +13,9 @@
                 $('#success-message').delay(600).velocity({opacity: 1}, { duration: 500, 
                     complete: function(elements){
                         $("#message-form input").each(function(){
-                           $(this).val(''); 
+                           $(this).val('');
+                            $scope.message = '';
+                            $scope.name = ''
                         });
                     }
                 });
